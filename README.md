@@ -12,7 +12,7 @@
 #### English
 ##### ※You need to install PHP.
 * Run `git clone git@github.com:haya573/binary-image-php.git`.
-* Put the binary image into the imgs folder.
+* Put the images you want to binaryize into the imgs folder.
 * Run `php main.php` in root.
 * Created binary-imgs folder, output the binary image of PNM format.
 
