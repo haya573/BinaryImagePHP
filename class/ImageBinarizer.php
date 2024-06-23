@@ -5,7 +5,8 @@ class ImageBinarizer
     public const BEFORE_CONVERT_IMG_DIR = './imgs';
     public const AFTER_CONVERT_IMG_DIR = './binary-imgs';
 
-    public function __construct() {
+    public function __construct()
+    {
         if (!file_exists(self::AFTER_CONVERT_IMG_DIR)) {
             mkdir(self::AFTER_CONVERT_IMG_DIR);
         }
