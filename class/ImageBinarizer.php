@@ -72,13 +72,9 @@ class ImageBinarizer
     {
         $width = imageSX($img);
         $height = imageSY($img);
-        $testImg = imagecreatetruecolor($width, $height); // 空画像を作成
         return [
             'width' => $width,
             'height' => $height,
-            'test_img' => $testImg,
-            'black' => imagecolorallocate($testImg, 0, 0, 0),
-            'white' => imagecolorallocate($testImg, 255, 255, 255),
         ];
     }
 
