@@ -43,7 +43,7 @@ if (!in_array($ext, $imageBinarizer->getAllowExtList())) {
 
 // 画像読み込み
 $img = $imageBinarizer->loadImg($ext, $selectedImgName);
-if (is_null($img)) {
+if (is_null($img) || $img === false) {
     echo "Image does not exist. Please try again." . PHP_EOL;
     return;
 }

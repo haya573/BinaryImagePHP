@@ -80,7 +80,7 @@ class ImageBinarizer
      * 画像を読み込みイメージIDを返す
      *
      * @param string $ext
-     * @return GdImage|false
+     * @return GdImage|false|null
      */
     public function loadImg($ext, $imgName)
     {
