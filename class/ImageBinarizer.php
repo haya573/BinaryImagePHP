@@ -70,11 +70,9 @@ class ImageBinarizer
      */
     public function setBaseImgInfo($img)
     {
-        $width = imageSX($img);
-        $height = imageSY($img);
         return [
-            'width' => $width,
-            'height' => $height,
+            'width' => imageSX($img),
+            'height' => imageSY($img),
         ];
     }
 
