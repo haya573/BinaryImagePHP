@@ -67,8 +67,4 @@ if (file_exists($filePath)) {
 } else {
     echo "Image does not exist. Please try again." . PHP_EOL;
 }
-
-imagedestroy($img);
-imagedestroy($baseImgInfo['test_img']);
-
 ?>

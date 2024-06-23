@@ -57,8 +57,7 @@ class ImageBinarizer
                 $g = ($rawRGB >> 8) & 0xFF; // 右に8ビットずらして最下位ビットだけ取るために0xFF(2進数だと1111 1111)と積を取る(マスク演算)
                 $b = $rawRGB & 0xFF;
                 $grayScale = round(($r + $g + $b) / 3); // 二値化
-                $isBlack = $grayScale < 120;
-                $binaryArr[$y][$x] = self::setImagePixel($baseImgInfo, $x, $y, $isBlack);
+                $binaryArr[$y][$x] = (int) ($grayScale < 120);
             }
         }
         return $binaryArr;
@@ -130,7 +129,7 @@ class ImageBinarizer
      * 同じファイル名がある場合は(1),(2)のように連番をつける
      *
      * @param string $orgPath
-     * @param integer $num
+     * @param int $num
      * @return string
      */
     public function getUniqueFileName($orgPath, $num=0)
@@ -150,25 +149,6 @@ class ImageBinarizer
             return self::getUniqueFileName($orgPath, $num);
         } else {
             return str_replace(self::AFTER_CONVERT_IMG_DIR."/", '', $path);
-        }
-    }
-
-    /**
-     * 画素値からバイナリ値を返す
-     *
-     * @param array $baseImgInfo
-     * @param int $x, $y
-     * @param bool $isBlack
-     * @return int
-     */
-    private function setImagePixel($baseImgInfo, $x, $y, $isBlack)
-    {
-        if ($isBlack) {
-            imagesetpixel($baseImgInfo['test_img'], $y, $x, $baseImgInfo['black']);
-            return 1;
-        } else {
-            imagesetpixel($baseImgInfo['test_img'], $y, $x, $baseImgInfo['white']);
-            return 0;
         }
     }
 }
