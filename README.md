@@ -3,14 +3,14 @@
 
 # Usage
 ## Japanese
-#### ※PHPをインストールする必要があります。
+##### ※PHPをインストールする必要があります。
 * `git clone git@github.com:haya573/binary-image-php.git` を実行する。
 * imgsフォルダにバイナリ化したい画像を入れる。
 * ルート配下で `php main.php` を実行。
 * binary-imgsフォルダが生成され、pnm形式のバイナリ画像が出力されます。
 
 ## Engish
-#### ※You need to install PHP.
+##### ※You need to install PHP.
 * Run `git clone git@github.com:haya573/binary-image-php.git`.
 * Put the binary image into the imgs folder.
 * Run `php main.php` in root.
